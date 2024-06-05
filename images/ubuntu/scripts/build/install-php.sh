@@ -73,7 +73,7 @@ for version in $php_versions; do
         # https://github.com/krakjoe/pcov#interoperability
         phpdismod -v $version pcov
 
-    if [[ $version == "7.2" || $version == "7.3" || $version == "7.4" ]]; then
+    if [[ $version == "7.2" || $version == "7.3" ]]; then
         apt-get install --no-install-recommends php$version-recode
     fi
 
