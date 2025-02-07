@@ -1,19 +1,23 @@
 {
     "xcode": {
-        "default": "16_Release_Candidate",
+        "default": "16",
         "x64": {
             "versions": [
-                { "link": "16.1_beta", "version": "16.1.0-Beta+16B5001e", "symlinks": ["16.1"], "install_runtimes": "false", "sha256": "8848aacb32bdc0abbd7e14e4b712e07c98f4b6e5a23a8d77db03ab21dcb3c777"},
-                { "link": "16_Release_Candidate", "version": "16.0.0-Release.Candidate+16A242", "symlinks": ["16.0"], "install_runtimes": "true", "sha256": "84588e4d781307191892add603ea51504955de39e05c270a88833a38a929825d"}
+                { "link": "16.2", "version": "16.2+16C5032a", "install_runtimes": "true", "sha256": "0e367d06eb7c334ea143bada5e4422f56688aabff571bedf0d2ad9434b7290de"},
+                { "link": "16.1", "version": "16.1+16B40", "install_runtimes": "true", "sha256": "8ca961d55981f983d21b99a95a6b0ac04905b837f6e11346ee86d28f12afe720"},
+                { "link": "16", "version": "16.0.0+16A242d", "symlinks": ["16.0"], "install_runtimes": "true", "sha256": "4a26c3d102a55c7222fb145e0ee1503249c9c26c6e02dc64d783c8810b37b1e3"},
+                { "link": "15.4", "version": "15.4.0+15F31d", "install_runtimes": "true", "sha256": "82d3d61804ff3f4c7c82085e91dc701037ddaa770e542848b2477e22f4e8aa7a"}
             ]
         },
         "arm64":{
             "versions": [
-                { "link": "16.1_beta", "version": "16.1.0-Beta+16B5001e", "symlinks": ["16.1"], "install_runtimes": "true", "sha256": "8848aacb32bdc0abbd7e14e4b712e07c98f4b6e5a23a8d77db03ab21dcb3c777"},
-                { "link": "16_Release_Candidate", "version": "16.0.0-Release.Candidate+16A242", "symlinks": ["16.0"], "install_runtimes": "true", "sha256": "84588e4d781307191892add603ea51504955de39e05c270a88833a38a929825d"}
+                { "link": "16.2", "version": "16.2+16C5032a", "install_runtimes": "true", "sha256": "0e367d06eb7c334ea143bada5e4422f56688aabff571bedf0d2ad9434b7290de"},
+                { "link": "16.1", "version": "16.1+16B40", "install_runtimes": "true", "sha256": "8ca961d55981f983d21b99a95a6b0ac04905b837f6e11346ee86d28f12afe720"},
+                { "link": "16", "version": "16.0.0+16A242d", "symlinks": ["16.0"], "install_runtimes": "true", "sha256": "4a26c3d102a55c7222fb145e0ee1503249c9c26c6e02dc64d783c8810b37b1e3"},
+                { "link": "15.4", "version": "15.4.0+15F31d", "install_runtimes": "true", "sha256": "82d3d61804ff3f4c7c82085e91dc701037ddaa770e542848b2477e22f4e8aa7a"}
             ]
         }
-    },
+    },    
     "java": {
         "x64": {
             "default": "21",
@@ -25,26 +29,31 @@
         }
     },
     "android": {
-        "cmdline-tools": "commandlinetools-mac-12172612_latest.zip",
+        "cmdline-tools": "commandlinetools-mac-12266719_latest.zip",
         "sdk-tools": "sdk-tools-darwin-4333796.zip",
-        "platform_min_version": "35",
-        "build_tools_min_version": "35.0.2",
+        "platform_min_version": "34",
+        "build_tools_min_version": "35.0.0",
         "extras": [
             "android;m2repository", "google;m2repository", "google;google_play_services"
         ],
         "addons": [],
         "additional_tools": [
-            "cmake;3.22.1"
+            "cmake;3.31.0"
         ],
         "ndk": {
             "default": "27",
             "versions": [
-                "25", "26", "27"
+                "26", "27"
             ]
         }
     },
     "powershellModules": [
-        { "name": "Az" },
+        {
+            "name": "Az",
+            "versions": [
+                "12.4.0"
+            ]
+        },
         { "name": "Pester" },
         { "name": "PSScriptAnalyzer" }
     ],
@@ -65,7 +74,7 @@
             "p7zip",
             "packer",
             "perl",
-            "pkg-config",
+            "pkgconf",
             "swiftformat",
             "zstd",
             "gmp",
@@ -88,15 +97,15 @@
     "dotnet": {
         "arch":{
             "x64": {
-               "versions": [
-                   "7.0",
-                   "8.0"
+                "versions": [
+                    "8.0",
+                    "9.0"
                 ]
             },
             "arm64": {
                 "versions": [
-                    "7.0",
-                    "8.0"
+                    "8.0",
+                    "9.0"
                 ]
             }
         }
@@ -120,15 +129,15 @@
                         "3.9.*",
                         "3.10.*",
                         "3.11.*",
-                        "3.12.*"
+                        "3.12.*",
+                        "3.13.*"
                     ]
                 },
                 "arm64": {
                     "versions": [
-                        "3.9.*",
-                        "3.10.*",
                         "3.11.*",
-                        "3.12.*"
+                        "3.12.*",
+                        "3.13.*"
                     ]
                 }
             }
@@ -141,13 +150,15 @@
                 "x64": {
                     "versions": [
                         "18.*",
-                        "20.*"
+                        "20.*",
+                        "22.*"
                     ]
                 },
                 "arm64": {
                     "versions": [
                         "18.*",
-                        "20.*"
+                        "20.*",
+                        "22.*"
                     ]
                 }
             }
@@ -181,7 +192,17 @@
                 "x64": {
                     "versions": [
                         "3.1.*",
-                        "3.2.*"
+                        "3.2.*",
+                        "3.3.*",
+                        "3.4.*"
+                    ]
+                },
+                "arm64": {
+                    "versions": [
+                        "3.1.*",
+                        "3.2.*",
+                        "3.3.*",
+                        "3.4.*"
                     ]
                 }
             }
@@ -194,7 +215,7 @@
         "version": "18"
     },
     "php": {
-        "version": "8.3"
+        "version": "8.4"
     },
     "pwsh": {
         "version": "7.4"
